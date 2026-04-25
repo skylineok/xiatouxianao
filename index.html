@@ -29,86 +29,70 @@
 
     <!-- Hero 区域 -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Nexscope Agent
-            </div>
-            <h1 class="hero-title">
-                你的AI智能体<br>
-                <span class="gradient-text">智能销售，快速增长</span>
-            </h1>
-            <p class="hero-subtitle">
-                研究产品、验证需求、分析竞品——一站式搞定。<br>
-                告别频繁切换标签，开启高效销售。
-            </p>
-            <a href="#cta" class="btn btn-primary btn-lg">
-                加入候补名单
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <div class="hero-perks">
-                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>抢先体验</span>
-                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>优先入驻</span>
-                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>首发专属福利</span>
-            </div>
-            <div class="hero-tags">
-                <span class="tag">统一市场信号</span>
-                <span class="tag">可执行建议</span>
-                <span class="tag">卖家原生设计</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 实时演示区域 -->
-    <section class="demo-section">
-        <div class="container">
-            <div class="demo-card">
-                <div class="demo-header">
-                    <span class="live-badge"><span class="live-dot"></span>实时</span>
-                    <span class="demo-title">正在分析</span>
+        <div class="container hero-container">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Nexscope Agent
                 </div>
-                <div class="demo-query">
-                    <span class="query-label">当前查询</span>
-                    <div class="query-text">"分析这个产品创意：适合健身人群的便携式搅拌机"</div>
+                <h1 class="hero-title">
+                    你的AI智能体<br>
+                    <span class="gradient-text">智能销售，快速增长</span>
+                </h1>
+                <p class="hero-subtitle">
+                    研究产品、验证需求、分析竞品——一站式搞定。<br>
+                    告别频繁切换标签，开启高效销售。
+                </p>
+                <a href="#cta" class="btn btn-primary btn-lg">
+                    加入候补名单
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="hero-perks">
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>抢先体验</span>
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>优先入驻</span>
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>首发专属福利</span>
                 </div>
-                <div class="demo-loading" id="demoLoading">
-                    <div class="loading-step" data-step="1">
-                        <div class="step-indicator"></div>
-                        <span>读取需求信号...</span>
-                    </div>
-                    <div class="loading-step" data-step="2">
-                        <div class="step-indicator"></div>
-                        <span>检查价格压力...</span>
-                    </div>
-                    <div class="loading-step" data-step="3">
-                        <div class="step-indicator"></div>
-                        <span>对比竞争对手...</span>
-                    </div>
+                <div class="hero-tags">
+                    <span class="tag">统一市场信号</span>
+                    <span class="tag">可执行建议</span>
+                    <span class="tag">卖家原生设计</span>
                 </div>
-                <div class="demo-results" id="demoResults">
-                    <div class="result-card result-demand">
-                        <div class="result-icon">📈</div>
-                        <div class="result-label">需求强度</div>
-                        <div class="result-value strong">强劲</div>
-                        <div class="result-desc">生活方式吸引力强</div>
+            </div>
+            <div class="hero-right">
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <span class="live-badge"><span class="live-dot"></span>实时</span>
+                        <span class="demo-title">正在分析</span>
                     </div>
-                    <div class="result-card result-competition">
-                        <div class="result-icon">⚔️</div>
-                        <div class="result-label">竞争程度</div>
-                        <div class="result-value aggressive">激烈</div>
-                        <div class="result-desc">大量同质化产品</div>
+                    <div class="demo-query">
+                        <span class="query-label">当前查询</span>
+                        <div class="query-text">"分析这个产品创意：适合健身人群的便携式搅拌机"</div>
                     </div>
-                    <div class="result-card result-opportunity">
-                        <div class="result-icon">💎</div>
-                        <div class="result-label">市场机会</div>
-                        <div class="result-value moderate">有空间</div>
-                        <div class="result-desc">差异化定位可行</div>
-                    </div>
-                    <div class="result-card result-risk">
-                        <div class="result-icon">⚠️</div>
-                        <div class="result-label">风险等级</div>
-                        <div class="result-value warning">中等</div>
-                        <div class="result-desc">价格竞争风险</div>
+                    <div class="demo-results visible">
+                        <div class="result-card result-demand">
+                            <div class="result-icon">📈</div>
+                            <div class="result-label">需求强度</div>
+                            <div class="result-value strong">强劲</div>
+                            <div class="result-desc">生活方式吸引力强</div>
+                        </div>
+                        <div class="result-card result-competition">
+                            <div class="result-icon">⚔️</div>
+                            <div class="result-label">竞争程度</div>
+                            <div class="result-value aggressive">激烈</div>
+                            <div class="result-desc">大量同质化产品</div>
+                        </div>
+                        <div class="result-card result-opportunity">
+                            <div class="result-icon">💎</div>
+                            <div class="result-label">市场机会</div>
+                            <div class="result-value moderate">有空间</div>
+                            <div class="result-desc">差异化定位可行</div>
+                        </div>
+                        <div class="result-card result-risk">
+                            <div class="result-icon">⚠️</div>
+                            <div class="result-label">风险等级</div>
+                            <div class="result-value warning">中等</div>
+                            <div class="result-desc">价格竞争风险</div>
+                        </div>
                     </div>
                 </div>
             </div>

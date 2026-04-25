@@ -8,33 +8,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== 实时演示动画 =====
-function runDemoAnimation() {
-    const steps = document.querySelectorAll('.loading-step');
-    const results = document.getElementById('demoResults');
-    const loading = document.getElementById('demoLoading');
-
-    // 重置
-    steps.forEach(s => s.classList.remove('active'));
-    results.classList.remove('visible');
-
-    // 逐步显示加载步骤
-    steps.forEach((step, i) => {
-        setTimeout(() => {
-            step.classList.add('active');
-        }, (i + 1) * 800);
-    });
-
-    // 显示结果
-    setTimeout(() => {
-        loading.style.display = 'none';
-        results.classList.add('visible');
-    }, steps.length * 800 + 600);
-}
-
-// 页面加载后启动演示
-setTimeout(runDemoAnimation, 500);
-
 // ===== Capabilities 标签切换 =====
 const capTabs = document.querySelectorAll('.cap-tab');
 const capPanels = document.querySelectorAll('.cap-panel');
