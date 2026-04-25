@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexscope Agent — 你的电商AI智能体</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">N</span>
+                Nexscope
+            </a>
+            <div class="nav-links">
+                <a href="#capabilities">功能</a>
+                <a href="#core-capabilities">核心能力</a>
+                <a href="#skills">技能中心</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <a href="#cta" class="btn btn-primary btn-sm">加入候补名单</a>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Nexscope Agent
+            </div>
+            <h1 class="hero-title">
+                你的AI智能体<br>
+                <span class="gradient-text">智能销售，快速增长</span>
+            </h1>
+            <p class="hero-subtitle">
+                研究产品、验证需求、分析竞品——一站式搞定。<br>
+                告别频繁切换标签，开启高效销售。
+            </p>
+            <a href="#cta" class="btn btn-primary btn-lg">
+                加入候补名单
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="hero-perks">
+                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>抢先体验</span>
+                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>优先入驻</span>
+                <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>首发专属福利</span>
+            </div>
+            <div class="hero-tags">
+                <span class="tag">统一市场信号</span>
+                <span class="tag">可执行建议</span>
+                <span class="tag">卖家原生设计</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实时演示区域 -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-card">
+                <div class="demo-header">
+                    <span class="live-badge"><span class="live-dot"></span>实时</span>
+                    <span class="demo-title">正在分析</span>
+                </div>
+                <div class="demo-query">
+                    <span class="query-label">当前查询</span>
+                    <div class="query-text">"分析这个产品创意：适合健身人群的便携式搅拌机"</div>
+                </div>
+                <div class="demo-loading" id="demoLoading">
+                    <div class="loading-step" data-step="1">
+                        <div class="step-indicator"></div>
+                        <span>读取需求信号...</span>
+                    </div>
+                    <div class="loading-step" data-step="2">
+                        <div class="step-indicator"></div>
+                        <span>检查价格压力...</span>
+                    </div>
+                    <div class="loading-step" data-step="3">
+                        <div class="step-indicator"></div>
+                        <span>对比竞争对手...</span>
+                    </div>
+                </div>
+                <div class="demo-results" id="demoResults">
+                    <div class="result-card result-demand">
+                        <div class="result-icon">📈</div>
+                        <div class="result-label">需求强度</div>
+                        <div class="result-value strong">强劲</div>
+                        <div class="result-desc">生活方式吸引力强</div>
+                    </div>
+                    <div class="result-card result-competition">
+                        <div class="result-icon">⚔️</div>
+                        <div class="result-label">竞争程度</div>
+                        <div class="result-value aggressive">激烈</div>
+                        <div class="result-desc">大量同质化产品</div>
+                    </div>
+                    <div class="result-card result-opportunity">
+                        <div class="result-icon">💎</div>
+                        <div class="result-label">市场机会</div>
+                        <div class="result-value moderate">有空间</div>
+                        <div class="result-desc">差异化定位可行</div>
+                    </div>
+                    <div class="result-card result-risk">
+                        <div class="result-icon">⚠️</div>
+                        <div class="result-label">风险等级</div>
+                        <div class="result-value warning">中等</div>
+                        <div class="result-desc">价格竞争风险</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities 区域 -->
+    <section class="capabilities" id="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nexscope Agent 能帮你做什么</h2>
+                <p class="section-subtitle">从选品到上架，AI智能体全程陪伴你的销售之旅</p>
+            </div>
+            <div class="cap-tabs">
+                <button class="cap-tab active" data-tab="find">发现爆款产品</button>
+                <button class="cap-tab" data-tab="validate">验证市场需求</button>
+                <button class="cap-tab" data-tab="analyze">分析竞品差距</button>
+                <button class="cap-tab" data-tab="launch">低风险上架</button>
+            </div>
+            <div class="cap-content">
+                <div class="cap-panel active" id="panel-find">
+                    <div class="cap-left">
+                        <h3>发现值得卖的产品</h3>
+                        <ul class="cap-features">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>发现高潜力产品</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>查看细分市场拥挤程度</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>发现全新市场机会</li>
+                        </ul>
+                    </div>
+                    <div class="cap-right">
+                        <div class="cap-visual">
+                            <div class="visual-header">
+                                <span class="live-badge small"><span class="live-dot"></span>实时读数</span>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">需求趋势</span>
+                                <div class="visual-bar"><div class="bar-fill green" style="width:85%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">细分饱和度</span>
+                                <div class="visual-bar"><div class="bar-fill yellow" style="width:55%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">增长信号</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text strong">强劲</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">竞争强度</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot yellow"></span>
+                                    <span class="signal-text moderate">中等 · 趋于拥挤</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">下一步行动</span>
+                                <div class="visual-next">深度研究 → 验证利润空间</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cap-panel" id="panel-validate">
+                    <div class="cap-left">
+                        <h3>验证市场真实需求</h3>
+                        <ul class="cap-features">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>实时搜索量与趋势分析</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>买家评价情感分析</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>季节性与周期性洞察</li>
+                        </ul>
+                    </div>
+                    <div class="cap-right">
+                        <div class="cap-visual">
+                            <div class="visual-header">
+                                <span class="live-badge small"><span class="live-dot"></span>实时读数</span>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">搜索热度</span>
+                                <div class="visual-bar"><div class="bar-fill green" style="width:78%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">评价情感</span>
+                                <div class="visual-bar"><div class="bar-fill green" style="width:72%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">需求验证</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text strong">已确认</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">季节性</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text moderate">全年稳定</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">下一步行动</span>
+                                <div class="visual-next">验证完成 → 竞品分析</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cap-panel" id="panel-analyze">
+                    <div class="cap-left">
+                        <h3>找出竞品薄弱环节</h3>
+                        <ul class="cap-features">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>竞品定价策略分析</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>差评痛点挖掘</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>差异化机会定位</li>
+                        </ul>
+                    </div>
+                    <div class="cap-right">
+                        <div class="cap-visual">
+                            <div class="visual-header">
+                                <span class="live-badge small"><span class="live-dot"></span>实时读数</span>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">竞品数量</span>
+                                <div class="visual-bar"><div class="bar-fill orange" style="width:70%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">差评占比</span>
+                                <div class="visual-bar"><div class="bar-fill yellow" style="width:35%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">差异化空间</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text strong">较大</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">定价弹性</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text moderate">中高</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">下一步行动</span>
+                                <div class="visual-next">竞品分析 → 制定策略</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cap-panel" id="panel-launch">
+                    <div class="cap-left">
+                        <h3>降低上架风险</h3>
+                        <ul class="cap-features">
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>智能定价建议</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Listing 优化指导</li>
+                            <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#10B981" fill-opacity="0.15"/><path d="M6 10l3 3 5-6" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>风险评估与缓解方案</li>
+                        </ul>
+                    </div>
+                    <div class="cap-right">
+                        <div class="cap-visual">
+                            <div class="visual-header">
+                                <span class="live-badge small"><span class="live-dot"></span>实时读数</span>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">上架就绪度</span>
+                                <div class="visual-bar"><div class="bar-fill green" style="width:90%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">价格竞争力</span>
+                                <div class="visual-bar"><div class="bar-fill green" style="width:82%"></div></div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">整体风险</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text strong">低风险</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">利润预估</span>
+                                <div class="visual-signal">
+                                    <span class="signal-dot green"></span>
+                                    <span class="signal-text moderate">乐观</span>
+                                </div>
+                            </div>
+                            <div class="visual-item">
+                                <span class="visual-label">下一步行动</span>
+                                <div class="visual-next">策略制定 → 正式上架</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities 区域 -->
+    <section class="core-capabilities" id="core-capabilities">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nexscope Agent 的核心能力</h2>
+                <p class="section-subtitle">专为电商卖家打造的AI智能体，四大核心模块协同工作</p>
+            </div>
+            <div class="core-grid">
+                <div class="core-card">
+                    <div class="core-module">MOD-01</div>
+                    <div class="core-code">SKILL_CORE</div>
+                    <div class="core-icon">🧠</div>
+                    <h3 class="core-name">专家技能</h3>
+                    <p class="core-desc">内置电商领域专家知识，自动匹配最优分析策略，让AI像资深卖家一样思考</p>
+                </div>
+                <div class="core-card">
+                    <div class="core-module">MOD-02</div>
+                    <div class="core-code">LIVE_DATA</div>
+                    <div class="core-icon">📊</div>
+                    <h3 class="core-name">实时数据</h3>
+                    <p class="core-desc">持续监控市场动态、价格变化和竞争态势，确保你始终基于最新信息做决策</p>
+                </div>
+                <div class="core-card">
+                    <div class="core-module">MOD-03</div>
+                    <div class="core-code">MEMORY_LOG</div>
+                    <div class="core-icon">🔄</div>
+                    <h3 class="core-name">上下文记忆</h3>
+                    <p class="core-desc">记住你的偏好、历史查询和业务目标，每次交互都更懂你，越用越精准</p>
+                </div>
+                <div class="core-card">
+                    <div class="core-module">MOD-04</div>
+                    <div class="core-code">IM_CONNECT</div>
+                    <div class="core-icon">📱</div>
+                    <h3 class="core-name">随时随地访问</h3>
+                    <p class="core-desc">支持多平台接入，无论在电脑还是手机上，都能随时获取AI洞察</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Hub 区域 -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">专家打造的智能体技能</h2>
+                <p class="section-subtitle">安装即用，让Agent拥有专业级电商能力</p>
+            </div>
+            <div class="install-block">
+                <span class="install-label">安装到你的Agent</span>
+                <div class="install-code">
+                    <span class="prompt-sign">$</span>
+                    <span class="cmd-text">npx nexscope install</span>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <div class="skill-avatar">L</div>
+                        <div class="skill-meta">
+                            <span class="skill-featured">⭐ 精选</span>
+                            <span class="skill-name">Listing 优化</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">从头创建关键词优化的Listing，或审核现有Listing的SEO表现，自动生成改进建议。</p>
+                    <div class="skill-install">
+                        <code>npx skills add https://github.com/nexscope/listing-optimization</code>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-marketplaces">12 个市场平台</span>
+                        <a href="#" class="skill-view">查看 →</a>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <div class="skill-avatar avatar-purple">P</div>
+                        <div class="skill-meta">
+                            <span class="skill-featured">⭐ 精选</span>
+                            <span class="skill-name">价格策略</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">基于市场数据、竞品定价和需求弹性，智能推荐最优定价策略，最大化利润空间。</p>
+                    <div class="skill-install">
+                        <code>npx skills add https://github.com/nexscope/pricing-strategy</code>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-marketplaces">8 个市场平台</span>
+                        <a href="#" class="skill-view">查看 →</a>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <div class="skill-avatar avatar-cyan">C</div>
+                        <div class="skill-meta">
+                            <span class="skill-featured">⭐ 精选</span>
+                            <span class="skill-name">竞品监控</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">持续追踪竞争对手的价格变动、库存状态和评价变化，第一时间发现市场机会。</p>
+                    <div class="skill-install">
+                        <code>npx skills add https://github.com/nexscope/competitor-watch</code>
+                    </div>
+                    <div class="skill-footer">
+                        <span class="skill-marketplaces">10 个市场平台</span>
+                        <a href="#" class="skill-view">查看 →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-more">
+                <a href="#" class="btn btn-outline">查看更多技能</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 对比表格区域 -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">为什么卖家都在转向 Nexscope Agent</h2>
+                <p class="section-subtitle">不只是收集数据，更是理解数据</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="col-gray">传统工具</th>
+                            <th class="col-gray">通用AI</th>
+                            <th class="col-highlight">
+                                Nexscope ✅
+                                <span class="best-badge">最佳选择</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">工作流程</td>
+                            <td class="col-gray"><span class="cross">✗</span> 标签页碎片化</td>
+                            <td class="col-gray"><span class="cross">✗</span> 无内置工作流</td>
+                            <td class="col-highlight"><span class="check">✓</span> 一个统一平台</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">上下文理解</td>
+                            <td class="col-gray"><span class="cross">✗</span> 仅原始数据</td>
+                            <td class="col-gray"><span class="cross">✗</span> 上下文有限</td>
+                            <td class="col-highlight"><span class="check">✓</span> 卖家原生记忆</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">输出结果</td>
+                            <td class="col-gray"><span class="cross">✗</span> 手动分析</td>
+                            <td class="col-gray"><span class="cross">✗</span> 泛泛而谈</td>
+                            <td class="col-highlight"><span class="check">✓</span> 可执行建议</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">学习进化</td>
+                            <td class="col-gray"><span class="cross">✗</span> 静态看板</td>
+                            <td class="col-gray"><span class="cross">✗</span> 基于会话</td>
+                            <td class="col-highlight"><span class="check">✓</span> 持续优化</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">速度</td>
+                            <td class="col-gray"><span class="cross">✗</span> 慢（手动）</td>
+                            <td class="col-gray"><span class="cross">✗</span> 快但泛化</td>
+                            <td class="col-highlight"><span class="check">✓</span> 10倍提速</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">上手门槛</td>
+                            <td class="col-gray"><span class="cross">✗</span> 陡峭学习曲线</td>
+                            <td class="col-gray"><span class="cross">✗</span> 低但有限</td>
+                            <td class="col-highlight"><span class="check">✓</span> 零门槛</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="comparison-quote">
+                更少的工具切换，更快的研究速度，更清晰的下一步行动
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 区域 -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>这和卖家工具有什么不同？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>卖家工具帮你查找和筛选数据，Nexscope 帮你理解这些数据并决定下一步该做什么——全部在一个平台完成。不只是数据展示，更是决策支持。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>这只是一个AI聊天工具吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>不是。Nexscope Agent 专为电商场景设计，内置市场数据、竞品分析和产品研究能力。它不只会聊天，更会实时获取数据、执行分析并给出可操作的建议。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>我需要经验才能使用吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>完全不需要。Nexscope Agent 采用零门槛设计，无论你是新手卖家还是资深运营，都能快速上手。智能体会根据你的水平自动调整输出深度。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>数据来源是什么？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>我们整合了多个主流电商平台的公开数据，包括亚马逊、eBay、沃尔玛等。所有数据均来自合规渠道，并通过实时更新确保信息的准确性。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>可以随时取消吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>当然可以。我们没有任何长期合约，你可以随时取消订阅。你的数据在你取消后会被安全删除。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 底部区域 -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">用AI智能体<br><span class="gradient-text">智能销售</span></h2>
+                <p class="cta-subtitle">
+                    加入候补名单，率先体验专为电商卖家打造的AI助手。<br>
+                    从选品到上架，让AI为你做最辛苦的研究工作。
+                </p>
+                <a href="#" class="btn btn-primary btn-lg">
+                    加入候补名单
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="cta-perks">
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>抢先体验</span>
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>优先入驻</span>
+                    <span class="perk"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>首发专属福利</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">N</span>
+                        Nexscope
+                    </a>
+                    <p class="footer-desc">你的电商AI智能体，助你智能销售、快速增长。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>产品</h4>
+                    <a href="#">功能</a>
+                    <a href="#">定价</a>
+                    <a href="#">技能市场</a>
+                    <a href="#">更新日志</a>
+                </div>
+                <div class="footer-links">
+                    <h4>公司</h4>
+                    <a href="#">关于我们</a>
+                    <a href="#">博客</a>
+                    <a href="#">加入我们</a>
+                    <a href="#">联系方式</a>
+                </div>
+                <div class="footer-links">
+                    <h4>法律</h4>
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">Cookie政策</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nexscope. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
