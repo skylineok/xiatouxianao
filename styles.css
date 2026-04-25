@@ -242,7 +242,7 @@ body {
     justify-content: center;
     gap: 12px;
     margin-top: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .tag {
@@ -1170,5 +1170,14 @@ body {
     .hero-perks, .cta-perks {
         flex-direction: column;
         align-items: center;
+    }
+
+    .hero-tags {
+        flex-wrap: wrap;
+    }
+
+    .hero-tags .tag {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
