@@ -422,7 +422,7 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
 }
 
 .section-title {
@@ -675,8 +675,8 @@ body {
 }
 
 .install-block {
-    max-width: 600px;
-    margin: 0 auto 48px;
+    max-width: 500px;
+    margin: 0 auto 40px;
     text-align: center;
 }
 
@@ -711,14 +711,16 @@ body {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .skill-card {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 28px;
+    padding: 24px;
     transition: transform 0.25s, border-color 0.25s;
 }
 
@@ -730,21 +732,22 @@ body {
 .skill-top {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 14px;
 }
 
 .skill-avatar {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: 10px;
     background: var(--gradient-main);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     color: white;
+    flex-shrink: 0;
 }
 
 .skill-avatar.avatar-purple {
@@ -756,35 +759,35 @@ body {
 }
 
 .skill-featured {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--accent-yellow);
 }
 
 .skill-name {
     display: block;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-primary);
 }
 
 .skill-desc {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
 }
 
 .skill-install {
-    padding: 10px 14px;
+    padding: 8px 12px;
     background: #0D0D15;
     border-radius: var(--radius-sm);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     overflow-x: auto;
 }
 
 .skill-install code {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-secondary);
     white-space: nowrap;
 }
@@ -796,12 +799,12 @@ body {
 }
 
 .skill-marketplaces {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-muted);
 }
 
 .skill-view {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--accent-indigo);
     text-decoration: none;
